@@ -10,8 +10,14 @@
     "svgr": "npx @svgr/cli --out-dir ./icons --ignore-existing --typescript -- ./public/icons"
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/serialize": "^1.1.4",
+    "@emotion/server": "^11.11.0",
+    "@emotion/utils": "^1.2.1",
     "@formatjs/intl-localematcher": "^0.5.4",
     "@mantine/core": "^7.9.0",
+    "@mantine/emotion": "^7.9.0",
     "@mantine/hooks": "^7.9.0",
     "@types/negotiator": "^0.6.3",
     "axios": "^1.6.8",
