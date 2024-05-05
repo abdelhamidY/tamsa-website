@@ -1,5 +1,5 @@
 {
-  "name": "tamsa-frontend",
+  "name": "my-project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,15 +10,7 @@
     "svgr": "npx @svgr/cli --out-dir ./icons --ignore-existing --typescript -- ./public/icons"
   },
   "dependencies": {
-    "@emotion/cache": "^11.11.0",
-    "@emotion/react": "^11.11.4",
-    "@emotion/serialize": "^1.1.4",
-    "@emotion/server": "^11.11.0",
-    "@emotion/utils": "^1.2.1",
     "@formatjs/intl-localematcher": "^0.5.4",
-    "@mantine/core": "^7.9.0",
-    "@mantine/emotion": "^7.9.0",
-    "@mantine/hooks": "^7.9.0",
     "@types/negotiator": "^0.6.3",
     "axios": "^1.6.8",
     "negotiator": "^0.6.3",
@@ -33,11 +25,11 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "postcss": "^8.4.38",
-    "postcss-preset-mantine": "^1.15.0",
-    "postcss-simple-vars": "^7.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
 }

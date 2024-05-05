@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <div style={{ padding: "20px", display: "flex", justifyContent: "center" }}>
-      gameed
-    </div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <p className="text-red-500">hello</p>
+    </main>
   );
 }
