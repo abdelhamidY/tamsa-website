@@ -31,7 +31,7 @@ const TrustedCharity = () => {
 
         <main className="grid grid-cols-3  gap-10">
           {[...Array(6)].map((_, index) => (
-            <TrustedCharityItem />
+            <TrustedCharityItem key={index} />
           ))}
         </main>
       </div>
