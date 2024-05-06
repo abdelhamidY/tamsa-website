@@ -3,7 +3,7 @@ import { MediaCenterItemProps } from "./types";
 
 const MediaCenterItem = ({ image, title }: MediaCenterItemProps) => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col justify-center ">
       <Image
         src={"/images/partnership.png"}
         alt="news"
