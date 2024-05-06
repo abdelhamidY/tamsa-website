@@ -1,1 +1,12 @@
-{}
+{
+  "navigationLinks": [
+    { "label": "المركز الاعلامى", "path": "/dedicatedServer" },
+    { "label": "المركز الاعلامى", "path": "/dedicatedServer" },
+    { "label": "شركاؤنا", "path": "/dedicatedServer" },
+    { "label": "شركاؤنا", "path": "/dedicatedServer" },
+    { "label": "خدماتنا", "path": "/" },
+    { "label": "المنظمة الموثوقة", "path": "/" },
+    { "label": "من نحن", "path": "/" },
+    { "label": "الرئيسية", "path": "/" }
+  ]
+}

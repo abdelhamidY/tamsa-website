@@ -1,5 +1,8 @@
+import Nav from "@/components/shared/layout/nav";
+import { Locale } from "@/i18n.config";
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "@/components/shared/layout/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -8,12 +11,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Locale };
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Nav lang={params.lang} />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

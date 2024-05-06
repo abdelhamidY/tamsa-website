@@ -4,10 +4,11 @@ import HeaderPage from "@/components/shared/HeaderPage/HeaderPage";
 
 export default function Home() {
   return (
-    <main className="has-app-max-width h-[1000px]">
-      <HeaderPage title="Home" image="/images/headerImage.png" />
+    <main className="has-app-max-width">
+      {/* <HeaderPage title="Home" image="/images/headerImage.png" />
       <CompanyInfo description="" image="" title="" />
-      <OurServices />
+      <OurServices /> */}
+     
     </main>
   );
 }
