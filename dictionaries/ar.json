@@ -3,7 +3,6 @@
     { "label": "المركز الاعلامى", "path": "/dedicatedServer" },
     { "label": "الأخبار", "path": "/media-center" },
     { "label": "شركاؤنا", "path": "/our-partners" },
-    { "label": "شركاؤنا", "path": "/dedicatedServer" },
     { "label": "خدماتنا", "path": "/services" },
     { "label": "المنظمة الموثوقة", "path": "/trustedcharity" },
     { "label": "من نحن", "path": "/about-us" },

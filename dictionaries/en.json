@@ -4,6 +4,7 @@
     { "label": "Services", "path": "/services" },
     { "label": "Partners", "path": "/our-partners" },
     { "label": "Tools", "path": "/" },
-    { "label": "About Us", "path": "/about-us" }
+    { "label": "About Us", "path": "/about-us" },
+    { "label": "Home", "path": "/" }
   ]
 }
