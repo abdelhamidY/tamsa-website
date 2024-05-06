@@ -3,7 +3,7 @@ import HeaderPage from "@/components/shared/HeaderPage/HeaderPage";
 
 const page = () => {
   return (
-    <section className="has-app-max-width mt-10">
+    <section className="has-app-max-width ">
       <HeaderPage image="/images/news.png" title="الأخبار" />
       <MediaCenter />
     </section>
