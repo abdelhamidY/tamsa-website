@@ -5,6 +5,7 @@
     { "label": "Partners", "path": "/our-partners" },
     { "label": "Tools", "path": "/" },
     { "label": "About Us", "path": "/about-us" },
-    { "label": "Home", "path": "/" }
+    { "label": "Home", "path": "/" },
+    { "label": "Trusted Charity", "path": "/trusted-charity" }
   ]
 }

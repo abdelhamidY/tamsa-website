@@ -4,7 +4,7 @@
     { "label": "الأخبار", "path": "/media-center" },
     { "label": "شركاؤنا", "path": "/our-partners" },
     { "label": "خدماتنا", "path": "/services" },
-    { "label": "المنظمة الموثوقة", "path": "/trustedcharity" },
+    { "label": "المنظمة الموثوقة", "path": "/trusted-charity" },
     { "label": "من نحن", "path": "/about-us" },
     { "label": "الرئيسية", "path": "/" }
   ]
