@@ -1,9 +1,13 @@
-import Image from "next/image";
+import CompanyInfo from "@/components/home/CompanyInfo/CompanyInfo";
+import OurServices from "@/components/home/OurServices/OurServices";
+import HeaderPage from "@/components/shared/HeaderPage/HeaderPage";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p className="text-red-500">hello</p>
+    <main className="has-app-max-width h-[1000px]">
+      <HeaderPage title="Home" image="/images/headerImage.png" />
+      <CompanyInfo description="" image="" title="" />
+      <OurServices />
     </main>
   );
 }

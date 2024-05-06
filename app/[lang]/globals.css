@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  direction: rtl;
+}
+
+.has-app-max-width {
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+}
+.text-with-line {
+  position: relative;
+  display: inline-block;
+}
+
+.text-with-line::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust this value to position the line */
+  right: 0;
+  width: 70%; /* Ensures the line spans the width of the container */
+  height: 4px; /* Adjust the thickness of the line */
+  background-color: #d57153; /* Adjust the color of the line */
+  border-radius: 10px;
+}
