@@ -1,9 +1,9 @@
 {
   "navigationLinks": [
     { "label": "Products", "path": "/dedicatedServer" },
-    { "label": "Services", "path": "/" },
-    { "label": "Partners", "path": "/" },
+    { "label": "Services", "path": "/services" },
+    { "label": "Partners", "path": "/our-partners" },
     { "label": "Tools", "path": "/" },
-    { "label": "About Us", "path": "/" }
+    { "label": "About Us", "path": "/about-us" }
   ]
 }

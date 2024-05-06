@@ -1,12 +1,12 @@
 {
   "navigationLinks": [
     { "label": "المركز الاعلامى", "path": "/dedicatedServer" },
-    { "label": "المركز الاعلامى", "path": "/dedicatedServer" },
+    { "label": "الأخبار", "path": "/media-center" },
+    { "label": "شركاؤنا", "path": "/our-partners" },
     { "label": "شركاؤنا", "path": "/dedicatedServer" },
-    { "label": "شركاؤنا", "path": "/dedicatedServer" },
-    { "label": "خدماتنا", "path": "/" },
-    { "label": "المنظمة الموثوقة", "path": "/" },
-    { "label": "من نحن", "path": "/" },
+    { "label": "خدماتنا", "path": "/services" },
+    { "label": "المنظمة الموثوقة", "path": "/trustedcharity" },
+    { "label": "من نحن", "path": "/about-us" },
     { "label": "الرئيسية", "path": "/" }
   ]
 }
