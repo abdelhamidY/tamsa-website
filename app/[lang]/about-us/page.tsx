@@ -1,5 +1,6 @@
 import TrustedCharityItem from '@/components/TrustedCharity/TrustedCharityItem/TrustedCharityItem'
 import HeaderPage from '@/components/shared/HeaderPage/HeaderPage'
+import { TamsaLogo } from '@/icons'
 import Image from 'next/image'
 import React from 'react'
 
@@ -60,6 +61,27 @@ const page = () => {
           </p>
         </div>
       </div>
+			</div>
+
+			<div className='grid grid-cols-2 mt-10 max-h-[420px] p-5 gap-10'>
+			<div className='grid grid-rows-2 gap-10 grid-cols-2'>
+				{[...Array(4)].map((_, index) => (
+            <div className="bg-[#FCF6F4]  flex  gap-2  flex-col items-center justify-center p-1 rounded-lg max-h-[200px]" key={index}>
+						<TamsaLogo />
+						<p className=" font-medium text-center  text-[#29292E]">
+							الأنشطة اليومية​
+						</p>
+					</div>
+          ))}
+				</div>
+				<div>
+				<Image
+				className='w-full h-full object-cover'
+					src={"/images/trustcharityInfo.png"}
+					alt="trustedCharity"
+				/>
+				</div>
+				
 			</div>
 
     </section>
