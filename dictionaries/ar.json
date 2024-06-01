@@ -7,5 +7,11 @@
     { "label": "المنظمة الموثوقة", "path": "/trusted-charity" },
     { "label": "من نحن", "path": "/about-us" },
     { "label": "الرئيسية", "path": "/" }
-  ]
+  ],
+  "reports": {
+    "title": "التقارير"
+  },
+  "aboutUs": {
+    "title": "من نحن"
+  }
 }

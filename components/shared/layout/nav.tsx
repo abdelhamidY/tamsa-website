@@ -9,10 +9,13 @@ import { getDictionary } from "@/lib/dictionary";
 import SvgTamsaLogo from "@/icons/TamsaLogo";
 import SvgWorld from "@/icons/World";
 import MenuButton from "./menuButtons";
+import { usePathname } from "next/navigation";
 function Nav({ lang }: { lang: Locale }) {
   const [showNav, setShowNav] = useState(false);
   const [active, setActive] = useState(false);
   const [navigationLinks, setNavigationLinks] = useState<any>();
+  const pathName = usePathname();
+
   const getNavData = async () => {
     try {
       const { navigationLinks } = await getDictionary(lang);
@@ -35,13 +38,20 @@ function Nav({ lang }: { lang: Locale }) {
     setActive((prevState) => !prevState);
   };
 
-  //   const switchLanguage = (newLanguage: string) => {
-  //     const newPath = router.asPath.replace(
-  //       `/${router.locale}`,
-  //       `/${newLanguage}`,
-  //     );
-  //     router.push(newPath, newPath, { locale: newLanguage });
-  //   };
+  const redirectedPathName = (locale: string) => {
+    if (!pathName) return "/";
+    const segments = pathName.split("/");
+    segments[1] = locale;
+    return segments.join("/");
+  };
+
+  // const switchLanguage = (newLanguage: string) => {
+  //   const newPath = router.asPath.replace(
+  //     `/${router.locale}`,
+  //     `/${newLanguage}`,
+  //   );
+  //   router.push(newPath, newPath, { locale: newLanguage });
+  // };
 
   return (
     <>
@@ -66,9 +76,9 @@ function Nav({ lang }: { lang: Locale }) {
             </div>
 
             <div className=" hidden h-full w-full items-center lg:ml-10 lg:flex lg:justify-between  xl:ml-0">
-              <div>
+              <Link href={redirectedPathName(lang === "ar" ? "en" : "ar")}>
                 <SvgWorld />
-              </div>
+              </Link>
 
               <div className="flex  justify-between ">
                 <div className=" flex items-center gap-10">
@@ -76,7 +86,7 @@ function Nav({ lang }: { lang: Locale }) {
                     (item: { label: string; path: string }, index: number) => {
                       return (
                         <Link
-                          href={item.path}
+                          href={`/${lang}${item.path}`}
                           role="link"
                           key={index}
                           className={` hover:text-bs-100 cursor-pointer text-sm  font-normal capitalize xl:text-sm`}

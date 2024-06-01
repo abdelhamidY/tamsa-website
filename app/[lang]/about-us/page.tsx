@@ -1,13 +1,16 @@
 import TrustedCharityItem from "@/components/TrustedCharity/TrustedCharityItem/TrustedCharityItem";
 import HeaderPage from "@/components/shared/HeaderPage/HeaderPage";
+import { Locale } from "@/i18n.config";
 import { TamsaLogo } from "@/icons";
+import { getDictionary } from "@/lib/dictionary";
 import Image from "next/image";
 import React from "react";
 
-const page = () => {
+const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
+  const { aboutUs } = await getDictionary(lang);
   return (
     <section className="has-app-max-width">
-      <HeaderPage image="/images/trustedCharity.png" title="من نحن" />
+      <HeaderPage image="/images/trustedCharity.png" title={aboutUs.title} />
 
       <main className="grid grid-cols-3 gap-10 mt-10">
         {[...Array(3)].map((_, index) => (

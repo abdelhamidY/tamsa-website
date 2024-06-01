@@ -7,5 +7,11 @@
     { "label": "About Us", "path": "/about-us" },
     { "label": "Home", "path": "/" },
     { "label": "Trusted Charity", "path": "/trusted-charity" }
-  ]
+  ],
+  "reports": {
+    "title": "Reports"
+  },
+  "aboutUs": {
+    "title": "About Us"
+  }
 }
