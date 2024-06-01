@@ -53,11 +53,28 @@ function Nav({ lang }: { lang: Locale }) {
   //   router.push(newPath, newPath, { locale: newLanguage });
   // };
 
+  const cutString = (str: string) => {
+    const parts = str.split("/");
+
+    // If the string is in the format "/en" or "/ar", return "/"
+    if (parts.length === 2 && (parts[1] === "en" || parts[1] === "ar")) {
+      return "/";
+    }
+
+    // If the string is in the format "/en/something" or "/ar/something", return "/something"
+    if (parts.length >= 3) {
+      return `/${parts[2]}`;
+    }
+
+    // For other cases, return the original string
+    return str;
+  };
+
   return (
     <>
       {/* nav large screen */}
 
-      <div className="sticky left-0 top-0 z-[15]  w-full bg-[#FAF9F4CC] bg-opacity-80  backdrop-blur-lg ">
+      <div className="fixed left-0 top-0 z-[15]  w-full bg-[#FAF9F4CC] bg-opacity-80  backdrop-blur-sm ">
         <div className="relative  sm:pl-[3%] sm:pr-[3%] 2xl:mx-auto 2xl:max-w-[auto] ">
           <div className="mx-auto  flex items-center gap-5 py-3 lg:gap-10 lg:py-4  lg:pr-2 xl:max-w-[90rem] xl:pr-0  ">
             <div className="flex w-full flex-row items-center justify-between px-6 lg:hidden">
@@ -84,12 +101,17 @@ function Nav({ lang }: { lang: Locale }) {
                 <div className=" flex items-center gap-10">
                   {navigationLinks?.map(
                     (item: { label: string; path: string }, index: number) => {
+                      console.log(item.path, pathName);
                       return (
                         <Link
                           href={`/${lang}${item.path}`}
                           role="link"
                           key={index}
-                          className={` hover:text-bs-100 cursor-pointer text-sm  font-normal capitalize xl:text-sm`}
+                          className={` hover:text-bs-100 cursor-pointer text-sm  font-normal capitalize xl:text-sm ${
+                            item.path === cutString(pathName)
+                              ? "border-b-[2px] border-[#D67254]"
+                              : "text-bs-50"
+                          }`}
                         >
                           {item.label}
                         </Link>

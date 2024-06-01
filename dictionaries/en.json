@@ -1,12 +1,11 @@
 {
   "navigationLinks": [
-    { "label": "Products", "path": "/dedicatedServer" },
+    { "label": "Home", "path": "/" },
+    { "label": "About Us", "path": "/about-us" },
+    { "label": "Trusted Charity", "path": "/trusted-charity" },
     { "label": "Services", "path": "/services" },
     { "label": "Partners", "path": "/our-partners" },
-    { "label": "Tools", "path": "/" },
-    { "label": "About Us", "path": "/about-us" },
-    { "label": "Home", "path": "/" },
-    { "label": "Trusted Charity", "path": "/trusted-charity" }
+    { "label": "News", "path": "/media-center" }
   ],
   "reports": {
     "title": "Reports"
