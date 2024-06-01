@@ -70,6 +70,16 @@ function Nav({ lang }: { lang: Locale }) {
     return str;
   };
 
+  useEffect(() => {
+    if (lang === "ar") {
+      document.documentElement.dir = "rtl";
+    }
+
+    if (lang === "en") {
+      document.documentElement.dir = "ltr";
+    }
+  }, [lang]);
+
   return (
     <>
       {/* nav large screen */}
