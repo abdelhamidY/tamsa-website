@@ -19,7 +19,10 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
       </main>
 
       <div className="p-5 mt-10">
-        <div className="flex justify-between bg-gradient-to-r from-[#29292E] to-[#343441] p-5">
+        <div
+          className="flex flex-start justify-between bg-gradient-to-r from-[#29292E] to-[#343441] p-5"
+          style={{ direction: "ltr" }}
+        >
           <div className="grid grid-cols-2 gap-10 grid-rows-2 overflow-hidden">
             <Image
               src={"/images/trustcharityInfo.png"}
@@ -55,7 +58,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               هو معيار بريطاني لإدارة الجودة ويملكه المجلس الوطني للمنظمات
               التطوعية NCVO.
             </p>
-            {/* <br /> */}
+
             <p className="w-[693.5px] text-end font-light text-[16px] text-white">
               صمم هذا المعيار خصيصاً للقطاع غير الربحي بمختلف تخصصاته، حيث يضم
               مجموعة من المؤشرات التي تتميز بوضوحها وسهولة استخِدامها وشمولها،

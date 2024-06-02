@@ -7,6 +7,9 @@
     { "label": "من نحن", "path": "/about-us" },
     { "label": "الرئيسية", "path": "/" }
   ],
+  "Home": {
+    "title": "الرئيسية"
+  },
   "reports": {
     "title": "التقارير"
   },

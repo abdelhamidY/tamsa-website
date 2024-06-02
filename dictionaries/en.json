@@ -7,6 +7,9 @@
     { "label": "Partners", "path": "/our-partners" },
     { "label": "News", "path": "/media-center" }
   ],
+  "Home": {
+    "title": "Home"
+  },
   "reports": {
     "title": "Reports"
   },

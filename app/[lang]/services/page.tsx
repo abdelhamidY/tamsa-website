@@ -42,7 +42,7 @@ const page = () => {
     <section className="has-app-max-width mt-10">
       <HeaderPage image="/images/sericesimgs.jpg" title="خدماتنا" />
 
-      <section className="grid grid-cols-2 gap-4 mt-5">
+      <section className="grid grid-cols-2 gap-4 mt-5 px-10">
         <div className="bg-[#FAF9F4] p-4 rounded-lg">
           <Image
             src={"/images/c8c858e2ccb758204dff82667cf20517.jpg"}

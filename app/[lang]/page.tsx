@@ -4,17 +4,23 @@ import OurServices from "@/components/home/OurServices/OurServices";
 import Statics from "@/components/home/Statics/Statics";
 import Testimonials from "@/components/home/Testimonials/Testimonials";
 import HeaderPage from "@/components/shared/HeaderPage/HeaderPage";
+import { Locale } from "@/i18n.config";
+import { getDictionary } from "@/lib/dictionary";
 
-export default function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const { Home } = await getDictionary(lang);
   return (
     <main className="has-app-max-width">
-      <HeaderPage title="Home" image="/images/headerImage.png" />
+      <HeaderPage title={Home.title} image="/images/headerImage.png" />
       <CompanyInfo description="" image="" title="" />
-      <OurServices /> 
-      <Statics/>
-      <Clients/>
-      <Testimonials/>
-     
+      <OurServices />
+      <Statics />
+      <Clients />
+      <Testimonials />
     </main>
   );
 }
