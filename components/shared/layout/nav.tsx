@@ -9,10 +9,13 @@ import { getDictionary } from "@/lib/dictionary";
 import SvgTamsaLogo from "@/icons/TamsaLogo";
 import SvgWorld from "@/icons/World";
 import MenuButton from "./menuButtons";
+import { usePathname } from "next/navigation";
 function Nav({ lang }: { lang: Locale }) {
   const [showNav, setShowNav] = useState(false);
   const [active, setActive] = useState(false);
   const [navigationLinks, setNavigationLinks] = useState<any>();
+  const pathName = usePathname();
+
   const getNavData = async () => {
     try {
       const { navigationLinks } = await getDictionary(lang);
@@ -35,19 +38,53 @@ function Nav({ lang }: { lang: Locale }) {
     setActive((prevState) => !prevState);
   };
 
-  //   const switchLanguage = (newLanguage: string) => {
-  //     const newPath = router.asPath.replace(
-  //       `/${router.locale}`,
-  //       `/${newLanguage}`,
-  //     );
-  //     router.push(newPath, newPath, { locale: newLanguage });
-  //   };
+  const redirectedPathName = (locale: string) => {
+    if (!pathName) return "/";
+    const segments = pathName.split("/");
+    segments[1] = locale;
+    return segments.join("/");
+  };
+
+  // const switchLanguage = (newLanguage: string) => {
+  //   const newPath = router.asPath.replace(
+  //     `/${router.locale}`,
+  //     `/${newLanguage}`,
+  //   );
+  //   router.push(newPath, newPath, { locale: newLanguage });
+  // };
+
+  const cutString = (str: string) => {
+    const parts = str.split("/");
+
+    // If the string is in the format "/en" or "/ar", return "/"
+    if (parts.length === 2 && (parts[1] === "en" || parts[1] === "ar")) {
+      return "/";
+    }
+
+    // If the string is in the format "/en/something" or "/ar/something", return "/something"
+    if (parts.length >= 3) {
+      return `/${parts[2]}`;
+    }
+
+    // For other cases, return the original string
+    return str;
+  };
+
+  useEffect(() => {
+    if (lang === "ar") {
+      document.documentElement.dir = "rtl";
+    }
+
+    if (lang === "en") {
+      document.documentElement.dir = "ltr";
+    }
+  }, [lang]);
 
   return (
     <>
       {/* nav large screen */}
 
-      <div className="sticky left-0 top-0 z-[15]  w-full bg-[#FAF9F4CC] bg-opacity-80  backdrop-blur-lg ">
+      <div className="fixed left-0 top-0 z-[15]  w-full bg-[#FAF9F4CC] bg-opacity-80  backdrop-blur-sm ">
         <div className="relative  sm:pl-[3%] sm:pr-[3%] 2xl:mx-auto 2xl:max-w-[auto] ">
           <div className="mx-auto  flex items-center gap-5 py-3 lg:gap-10 lg:py-4  lg:pr-2 xl:max-w-[90rem] xl:pr-0  ">
             <div className="flex w-full flex-row items-center justify-between px-6 lg:hidden">
@@ -66,20 +103,25 @@ function Nav({ lang }: { lang: Locale }) {
             </div>
 
             <div className=" hidden h-full w-full items-center lg:ml-10 lg:flex lg:justify-between  xl:ml-0">
-              <div>
+              <Link href={redirectedPathName(lang === "ar" ? "en" : "ar")}>
                 <SvgWorld />
-              </div>
+              </Link>
 
               <div className="flex  justify-between ">
                 <div className=" flex items-center gap-10">
                   {navigationLinks?.map(
                     (item: { label: string; path: string }, index: number) => {
+                      console.log(item.path, pathName);
                       return (
                         <Link
-                          href={item.path}
+                          href={`/${lang}${item.path}`}
                           role="link"
                           key={index}
-                          className={` hover:text-bs-100 cursor-pointer text-sm  font-normal capitalize xl:text-sm`}
+                          className={` hover:text-bs-100 cursor-pointer text-sm  font-normal capitalize xl:text-sm ${
+                            item.path === cutString(pathName)
+                              ? "border-b-[2px] border-[#D67254]"
+                              : "text-bs-50"
+                          }`}
                         >
                           {item.label}
                         </Link>

@@ -1,4 +1,6 @@
 export { default as CommunitySvgrepoCom } from "./CommunitySvgrepoCom";
+export { default as ArrowBottomContain } from "./ArrowBottomContain";
+export { default as ArrowBottom } from "./ArrowBottom";
 export { default as Development } from "./Development";
 export { default as Evaluation } from "./Evaluation";
 export { default as LeftArrowSvgrepoCom } from "./LeftArrowSvgrepoCom";

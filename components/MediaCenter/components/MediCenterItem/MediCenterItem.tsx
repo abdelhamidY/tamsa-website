@@ -10,8 +10,8 @@ const MediaCenterItem = ({ image, title }: MediaCenterItemProps) => {
         width={427}
         height={300.54}
       />
-      <p className="text-center font-medium text-[23px]">
-        توقيع عقد هندسة الإجراءات مع جمعية عرقة الخيرية
+      <p className="text-center font-medium text-[20px] mt-4">
+        برنامج المنظمة الموثوقة
       </p>
     </div>
   );
