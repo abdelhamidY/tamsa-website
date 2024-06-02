@@ -84,7 +84,10 @@ function Nav({ lang }: { lang: Locale }) {
     <>
       {/* nav large screen */}
 
-      <div className="fixed left-0 top-0 z-[15]  w-full bg-[#FAF9F4CC] bg-opacity-80  backdrop-blur-sm ">
+      <div
+        className="fixed left-0 top-0 z-[15]  w-full bg-[#FAF9F4CC] bg-opacity-80  backdrop-blur-sm "
+        style={{ direction: lang === "ar" ? "ltr" : "rtl" }}
+      >
         <div className="relative  sm:pl-[3%] sm:pr-[3%] 2xl:mx-auto 2xl:max-w-[auto] ">
           <div className="mx-auto  flex items-center gap-5 py-3 lg:gap-10 lg:py-4  lg:pr-2 xl:max-w-[90rem] xl:pr-0  ">
             <div className="flex w-full flex-row items-center justify-between px-6 lg:hidden">
