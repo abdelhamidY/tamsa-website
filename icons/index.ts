@@ -1,5 +1,8 @@
+export { default as CommunitySvgrepoCom } from "./CommunitySvgrepoCom";
 export { default as Development } from "./Development";
 export { default as Evaluation } from "./Evaluation";
+export { default as LeftArrowSvgrepoCom } from "./LeftArrowSvgrepoCom";
+export { default as Logo } from "./Logo";
 export { default as OutValues } from "./OutValues";
 export { default as Quality } from "./Quality";
 export { default as TamsaLogo } from "./TamsaLogo";
