@@ -1,3 +1,4 @@
+import { register } from 'swiper/element/bundle';
 import Nav from "@/components/shared/layout/nav";
 import { Locale } from "@/i18n.config";
 import type { Metadata } from "next";
@@ -16,6 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { lang: Locale };
 }>) {
+
+// register Swiper custom elements
+register();
   return (
     <html lang="en">
       <body>
