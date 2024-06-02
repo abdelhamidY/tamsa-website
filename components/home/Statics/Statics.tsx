@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Statics = () => {
   return (
-    <div className="bg-[#fff] items-center justify-center flex pr-10 py-10 rounded-lg h-[300px] gap-8 h-[500px] my-20 ">
+    <div className="bg-[#fff] flex-col md:flex-row items-center h-auto justify-center flex pr-10 py-10 rounded-lg md:h-[300px] gap-14 h-[500px] my-20 ">
       
-      <div className="rounded-full bg-[#D57153] w-[300px] h-[300px] flex justify-start gap-8 py-12 items-center flex-col text-center ">
+      <div className="rounded-full bg-[#D57153] w-[250px] justify-center h-[250px] py-0  lg:w-[300px] lg:h-[300px] flex lg:justify-start gap-8 lg:py-12 items-center flex-col text-center ">
 				<CommunitySvgrepoCom width={60}	height={60} />
 
 				<div>
@@ -14,7 +14,7 @@ const Statics = () => {
 				</div>
 
 			</div>
-      <div className="rounded-full bg-[#D57153] w-[300px] h-[300px] flex justify-start gap-8 py-12 items-center flex-col text-center ">
+      <div className="rounded-full bg-[#D57153] w-[250px] justify-center h-[250px] py-0  lg:w-[300px] lg:h-[300px] flex lg:justify-start gap-8 lg:py-12 items-center flex-col text-center ">
 				<CommunitySvgrepoCom width={60}	height={60} />
 
 				<div>
@@ -23,7 +23,7 @@ const Statics = () => {
 				</div>
 
 			</div>
-      <div className="rounded-full bg-[#D57153] w-[300px] h-[300px] flex justify-start gap-8 py-12 items-center flex-col text-center ">
+      <div className="rounded-full bg-[#D57153] w-[250px] justify-center h-[250px] py-0  lg:w-[300px] lg:h-[300px] flex lg:justify-start gap-8 lg:py-12 items-center flex-col text-center ">
 				<CommunitySvgrepoCom width={60}	height={60} />
 
 				<div>

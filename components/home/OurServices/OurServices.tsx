@@ -17,13 +17,13 @@ const OurServices = () => {
           <div className="grid grid-cols-3  justify-between gap-6 w-full h-[250px]">
             <div className="relative height-[250px]">
               <div className="absolute flex flex-col justify-start items-end w-[100%] gap-2 p-4 h-[250px] bg-[url('/images/tamsaCompany.png')] bg-cover bg-center filter lightness-50 alpha-50 rounded-[20px]"></div>
-              <div className="relative flex flex-col justify-center items-end w-[100%] gap-4 p-6">
+              <div className="group relative flex flex-col justify-center items-start w-[100%] gap-4 p-6">
                 <Image
                   src="/images/partners/ffc22d274e5959c86c0797df52f6c1ee (1).png"
-                  className=""
+                  className="group-hover:scale-75 transition-all duration-500"
                   alt="company"
-                  width={100}
-                  height={100}
+                  width={75}
+                  height={75}
                 />
                 <p className="text-white text-[23px] text-right font-bold shadow-2xl">
                   تأسيس وحدات ومبادرات المسؤولية المجتمعية
