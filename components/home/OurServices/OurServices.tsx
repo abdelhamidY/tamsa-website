@@ -1,7 +1,11 @@
+"use client";
 import { LeftArrowSvgrepoCom } from "@/icons";
+import { appRoutes } from "@/utils/constants/app.routes";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const OurServices = () => {
+  const router = useRouter();
   return (
     <div className="bg-[#fff]  grid grid-rows-2  px-10 py-10  rounded-lg h-[500px]">
       <div className="flex flex-col gap-2 items-start ">
@@ -58,7 +62,10 @@ const OurServices = () => {
             </div>
           </div>
           <div className="flex gap-4 w-full justify-center">
-            <div className="flex gap-4 justify-between bg-[#D57153] px-4 py-2 rounded-3xl text-white text-[23px] font-bold shadow-2xl cursor-pointer w-[200px] hover:bg-[#e2714f] transition-all duration-300">
+            <div
+              className="flex gap-4 justify-between bg-[#D57153] px-4 py-2 rounded-3xl text-white text-[23px] font-bold shadow-2xl cursor-pointer w-[200px] hover:bg-[#e2714f] transition-all duration-300"
+              onClick={() => router.push(appRoutes.SERVICES)}
+            >
               <div className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#fff]">
                 <LeftArrowSvgrepoCom width={20} height={20} fontSize={20} />
               </div>
