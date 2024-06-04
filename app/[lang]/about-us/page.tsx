@@ -12,7 +12,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
     <section className="has-app-max-width">
       <HeaderPage image="/images/trustedCharity.png" title={aboutUs.title} />
 
-      <main className="grid grid-cols-3 gap-10 mt-10">
+      <main className="lg:grid flex items-center flex-wrap   grid-cols-1  lg:grid-cols-3 gap-10 mt-10">
         {[...Array(3)].map((_, index) => (
           <TrustedCharityItem key={index} />
         ))}
@@ -20,10 +20,10 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
 
       <div className="p-5 mt-10">
         <div
-          className="flex flex-start justify-between bg-gradient-to-r from-[#29292E] to-[#343441] p-5"
+          className="flex flex-col gap-5 xl:gap-0 xl:flex-row flex-start justify-between bg-gradient-to-r from-[#29292E] to-[#343441] p-5"
           style={{ direction: "ltr" }}
         >
-          <div className="grid grid-cols-2 gap-10 grid-rows-2 overflow-hidden">
+          <div className="grid order-1 xl:-order-1 grid-cols-1 sm:grid-cols-2 gap-10 grid-rows-2 overflow-hidden">
             <Image
               src={"/images/trustcharityInfo.png"}
               alt="trustedCharity"
@@ -49,7 +49,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               height={260.88}
             />
           </div>
-          <div className="flex flex-col items-end justify-center">
+          <div className="flex  flex-col items-end justify-center">
             <h1 className="font-medium text-[29px] mb-0 text-white">
               ماهو معيار المنظمة الموثوقة ؟
             </h1>
@@ -59,7 +59,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               التطوعية NCVO.
             </p>
 
-            <p className="w-[693.5px] text-end font-light text-[16px] text-white">
+            <p className="md:w-[693.5px] text-end font-light text-[16px] text-white">
               صمم هذا المعيار خصيصاً للقطاع غير الربحي بمختلف تخصصاته، حيث يضم
               مجموعة من المؤشرات التي تتميز بوضوحها وسهولة استخِدامها وشمولها،
               والتي تهدف إلى إدارة المنظمة بكفاءة وفاعلية.
@@ -68,8 +68,8 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 mt-10 max-h-[420px] p-5 gap-10">
-        <div className="grid grid-rows-2 gap-10 grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-10 md:max-h-[420px] p-5 gap-10">
+        <div className="grid grid-cols-1 sm:grid-rows-2 gap-10 sm:grid-cols-2">
           {[...Array(4)].map((_, index) => (
             <div
               className="bg-[#FCF6F4]  flex  gap-2  flex-col items-center justify-center p-1 rounded-lg max-h-[200px]"

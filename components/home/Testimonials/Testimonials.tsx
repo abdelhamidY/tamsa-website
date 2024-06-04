@@ -24,6 +24,7 @@ const Testimonials = () => {
       <Swiper
         modules={[Pagination]}
         slidesPerView={1}
+        autoplay={{ delay: 3000 }}
         pagination={{
           enabled: true,
           clickable: true,

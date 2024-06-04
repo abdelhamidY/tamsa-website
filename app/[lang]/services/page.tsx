@@ -42,8 +42,8 @@ const page = () => {
     <section className="has-app-max-width mt-10">
       <HeaderPage image="/images/sericesimgs.jpg" title="خدماتنا" />
 
-      <section className="grid grid-cols-2 gap-4 mt-5 px-10">
-        <div className="bg-[#FAF9F4] p-4 rounded-lg">
+      <section className="grid grid-cols-1  lg:grid-cols-2 gap-4 mt-5 px-5 sm:px-10">
+        <div className="bg-[#FAF9F4] order-1 lg:-order-1 p-4 rounded-lg">
           <Image
             src={"/images/c8c858e2ccb758204dff82667cf20517.jpg"}
             width={400}
@@ -63,7 +63,7 @@ const page = () => {
             سوف تقوم شركة تام بتعزيز تطبيق متطلبات المواصفة القياسية السعودية
             SASO2923 على النحو التالي
           </p>
-          <div className="grid grid-cols-3 grid-rows-3 gap-2 mt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 grid-rows-3 gap-2 mt-4">
             {duty.map((_, index) => (
               <div
                 key={index}

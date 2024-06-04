@@ -11,7 +11,7 @@ const page = () => {
           شركاؤنا من المؤسسات المانحة
         </h3>
         <div className="w-[80px] h-1 bg-[#D57153] mx-auto"></div>
-        <div className="grid grid-cols-3 gap-4 mt-10 grid-rows-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 mt-10 grid-rows-3">
           <div className="flex justify-center items-center">
             <Image
               src={"/images/partners/0b8dae15735ba642116c4f9c46c0d1eb.png"}
