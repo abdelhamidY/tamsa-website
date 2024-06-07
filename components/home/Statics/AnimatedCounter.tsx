@@ -39,7 +39,7 @@ const AnimatedCounter = ({
     };
   }, [ref, inView, from, to]);
 
-  return <span ref={ref} />;
+  return <span ref={ref} >{from}</span>;
 };
 
 export default AnimatedCounter;
