@@ -9,7 +9,7 @@ const Statics = () => {
         <CommunitySvgrepoCom width={60} height={60} />
 
         <div>
-          <p className="text-[23px] text-[#fff]">عملاء مسجلون</p>
+          <p className="text-[23px] text-[#fff]">مبادرات</p>
           <h1 className="text-[29px] text-[#fff]">
             {" "}
             <AnimatedCounter from={0} to={1000} />+
@@ -20,7 +20,7 @@ const Statics = () => {
         <CommunitySvgrepoCom width={60} height={60} />
 
         <div>
-          <p className="text-[23px] text-[#fff]">عملاء مسجلون</p>
+          <p className="text-[23px] text-[#fff]">عميل</p>
 
           <h1 className="text-[29px] text-[#fff]">
             <AnimatedCounter from={0} to={1000} />+
@@ -31,7 +31,7 @@ const Statics = () => {
         <CommunitySvgrepoCom width={60} height={60} />
 
         <div>
-          <p className="text-[23px] text-[#fff]">عملاء مسجلون</p>
+          <p className="text-[23px] text-[#fff]">مستشار</p>
           <h1 className="text-[29px] text-[#fff]">
             {" "}
             <AnimatedCounter from={0} to={1000} />+

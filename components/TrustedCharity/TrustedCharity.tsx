@@ -1,6 +1,8 @@
 import Image from "next/image";
 import TrustedCharityItem from "./TrustedCharityItem/TrustedCharityItem";
-const TrustedCharity = () => {
+import MoreBtn from "../shared/MoreBtn";
+import { appRoutes } from "@/utils/constants/app.routes";
+const TrustedCharity = ({ lang }: { lang: string }) => {
   return (
     <section className="has-app-max-width px-10">
       <div className="flex flex-col lg:flex-row justify-between gap-4 pt-20">
@@ -20,15 +22,14 @@ const TrustedCharity = () => {
           </p>
         </div>
         <div className="relative flex-1 w-full min-h-80  lg:min-h-64 overflow-hidden rounded-md">
-
-        <Image
-          src={"/images/trustcharityInfo.png"}
-          alt="trustedCharity"
-          fill={true}
-          className=" object-cover object-right sm:object-center"
-          // width={547}
-          // height={260.88}
-        />
+          <Image
+            src={"/images/trustcharityInfo.png"}
+            alt="trustedCharity"
+            fill={true}
+            className=" object-cover object-right sm:object-center"
+            // width={547}
+            // height={260.88}
+          />
         </div>
       </div>
       <div className="flex justify-end flex-col  items-start ">
@@ -41,6 +42,9 @@ const TrustedCharity = () => {
             <TrustedCharityItem key={index} />
           ))}
         </main>
+        <div className="pt-8 w-full">
+          <MoreBtn routerLink={appRoutes.home} isLtr={lang === "en"} />
+        </div>
       </div>
     </section>
   );

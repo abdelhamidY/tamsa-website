@@ -1,10 +1,38 @@
 import TrustedCharityItem from "@/components/TrustedCharity/TrustedCharityItem/TrustedCharityItem";
+import DistinguishesItem from "@/components/aboutUs/DistinguishesItem";
 import HeaderPage from "@/components/shared/HeaderPage/HeaderPage";
 import { Locale } from "@/i18n.config";
 import { TamsaLogo } from "@/icons";
 import { getDictionary } from "@/lib/dictionary";
 import Image from "next/image";
 import React from "react";
+import checkImage from "@/public/icons/check.png";
+import ideaImage from "@/public/icons/idea.png";
+import chatImage from "@/public/icons/chatting.png";
+import givingLoveImage from "@/public/icons/givingLove.png";
+const dummyArabicData = [
+  {
+    id: 1,
+    imgSrc: checkImage,
+    description:
+      "وكالة حصرية مع منظمة NCVO البريطانية المتخصصة في معايير الجودة في القطاع غير الربحي.",
+  },
+  {
+    id: 2,
+    imgSrc: ideaImage,
+    description: "خبرة متخصصة وممتدة في مجال الجودة والتقييم.ميزات جديدة",
+  },
+  {
+    id: 3,
+    imgSrc: chatImage,
+    description: "طاقم إداري مميز وقائمة مستشارين ومقيمين معتمدين حول المملكة.",
+  },
+  {
+    id: 4,
+    imgSrc: givingLoveImage,
+    description: "شراكات تطوير متنوعة في القطاع غير الربحي بمختلف مجالاته.",
+  },
+];
 
 const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   const { aboutUs } = await getDictionary(lang);
@@ -20,36 +48,42 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
 
       <div className="p-5 mt-10">
         <div
-          className="flex flex-col gap-5 xl:gap-0 xl:flex-row flex-start justify-between bg-gradient-to-r from-[#29292E] to-[#343441] p-5"
+          className="flex flex-col gap-5  overflow-hidden  xl:gap-0 xl:flex-row flex-start justify-between bg-gradient-to-r from-[#29292E] to-[#343441] p-5"
           style={{ direction: "ltr" }}
         >
-          <div className="grid order-1 xl:-order-1 grid-cols-1 sm:grid-cols-2 gap-10 grid-rows-2 overflow-hidden">
-            <Image
-              src={"/images/trustcharityInfo.png"}
-              alt="trustedCharity"
-              width={547}
-              height={260.88}
-            />
-            <Image
-              src={"/images/trustcharityInfo.png"}
-              alt="trustedCharity"
-              width={547}
-              height={260.88}
-            />
-            <Image
-              src={"/images/trustcharityInfo.png"}
-              alt="trustedCharity"
-              width={547}
-              height={260.88}
-            />
-            <Image
-              src={"/images/trustcharityInfo.png"}
-              alt="trustedCharity"
-              width={547}
-              height={260.88}
-            />
+          <div className="relative lg:-translate-y-20 lg:h-[400px]">
+            <div className=" grid order-1   xl:-order-1 grid-cols-1 sm:grid-cols-2 gap-5  grid-flow-row">
+              <Image
+                src={"/images/trustcharityInfo.png"}
+                alt="trustedCharity"
+                className="object-cover h-80 lg:-translate-y-20 w-full rounded-xl overflow-hidden"
+                width={200}
+                height={800}
+              />
+              <Image
+                src={"/images/trustcharityInfo.png"}
+                alt="trustedCharity"
+                className="h-80  w-full lg:translate-y-14 rounded-xl  "
+                width={200}
+                height={800}
+              />
+              <Image
+                src={"/images/trustcharityInfo.png"}
+                alt="trustedCharity"
+                className="h-80 lg:-translate-y-20 w-full rounded-xl overflow-hidden"
+                width={547}
+                height={260.88}
+              />
+              <Image
+                className="h-80  w-full lg:translate-y-14 rounded-xl  "
+                src={"/images/trustcharityInfo.png"}
+                alt="trustedCharity"
+                width={547}
+                height={260.88}
+              />
+            </div>
           </div>
-          <div className="flex  flex-col items-end justify-center">
+          <div className="flex w-full  flex-col items-end justify-center">
             <h1 className="font-medium text-[29px] mb-0 text-white">
               ماهو معيار المنظمة الموثوقة ؟
             </h1>
@@ -68,20 +102,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-10 md:max-h-[420px] p-5 gap-10">
-        <div className="grid grid-cols-1 sm:grid-rows-2 gap-10 sm:grid-cols-2">
-          {[...Array(4)].map((_, index) => (
-            <div
-              className="bg-[#FCF6F4]  flex  gap-2  flex-col items-center justify-center p-1 rounded-lg max-h-[200px]"
-              key={index}
-            >
-              <TamsaLogo />
-              <p className=" font-medium text-center  text-[#29292E]">
-                الأنشطة اليومية​
-              </p>
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-10  p-5 gap-10">
         <div>
           <Image
             className="w-full h-full object-cover"
@@ -90,6 +111,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
             width={547}
             height={260.88}
           />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-rows-2 gap-10 sm:grid-cols-2">
+          {dummyArabicData.map((item) => (
+            <DistinguishesItem
+              key={item.id}
+              imgSrc={item.imgSrc}
+              description={item.description}
+            />
+          ))}
         </div>
       </div>
     </section>
