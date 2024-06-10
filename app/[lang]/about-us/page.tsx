@@ -54,29 +54,29 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <div className="relative lg:-translate-y-20 lg:h-[400px]">
             <div className=" grid order-1   xl:-order-1 grid-cols-1 sm:grid-cols-2 gap-5  grid-flow-row">
               <Image
-                src={"/images/trustcharityInfo.png"}
+                src={"/images/about-img-2.png"}
                 alt="trustedCharity"
                 className="object-cover h-80 lg:-translate-y-20 w-full rounded-xl overflow-hidden"
                 width={200}
                 height={800}
               />
               <Image
-                src={"/images/trustcharityInfo.png"}
+                src={"/images/about-img-1.png"}
                 alt="trustedCharity"
-                className="h-80  w-full lg:translate-y-14 rounded-xl  "
+                className="h-80  w-full lg:translate-y-14 rounded-xl object-cover "
                 width={200}
                 height={800}
               />
               <Image
-                src={"/images/trustcharityInfo.png"}
+                src={"/images/about-img-3.jpeg"}
                 alt="trustedCharity"
-                className="h-80 lg:-translate-y-20 w-full rounded-xl overflow-hidden"
+                className="h-80  object-cover lg:-translate-y-20 w-full rounded-xl overflow-hidden"
                 width={547}
                 height={260.88}
               />
               <Image
-                className="h-80  w-full lg:translate-y-14 rounded-xl  "
-                src={"/images/trustcharityInfo.png"}
+                className="h-80  object-cover w-full lg:translate-y-14 rounded-xl  "
+                src={"/images/about-img-4.png"}
                 alt="trustedCharity"
                 width={547}
                 height={260.88}

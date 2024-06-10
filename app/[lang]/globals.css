@@ -81,3 +81,26 @@ html[dir="rtl"] body {
 li {
   list-style: none;
 }
+
+.custom-shadow {
+  box-shadow: 0px 0px 31.25px 0px #00000009;
+}
+.has-app-max-width .swiper {
+  overflow-x: clip;
+  padding: 0 0.25rem;
+  overflow-y: visible;
+  }
+  .has-app-max-width .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -4rem !important;
+    }
+    
+    .has-app-max-width .swiper-pagination-bullet-active {
+      background: #D57153;
+    
+    }
+    .border-custom{
+      border: 1px solid #F1F1F3;
+    }

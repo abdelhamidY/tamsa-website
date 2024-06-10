@@ -11,8 +11,8 @@ const page = () => {
           شركاؤنا من المؤسسات المانحة
         </h3>
         <div className="w-[80px] h-1 bg-[#D57153] mx-auto"></div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 mt-10 grid-rows-3">
-          <div className="flex justify-center items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3   mt-10 grid-rows-3">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/0b8dae15735ba642116c4f9c46c0d1eb.png"}
               width={200}
@@ -21,7 +21,7 @@ const page = () => {
               className="rounded-full text-center"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/2a2cf0d2080d0ea1758e4ad27f083a09.png"}
               width={200}
@@ -30,7 +30,7 @@ const page = () => {
               className="rounded-full text-center"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/2e3c9f315dc603a930308a2c4ed7e94f.png"}
               width={200}
@@ -39,7 +39,7 @@ const page = () => {
               className="rounded-full text-center"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/2fcb98026f524d998784fe2a96a7353a.png"}
               width={200}
@@ -48,7 +48,7 @@ const page = () => {
               className="rounded-full text-center"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/99f1bec28e0276492ad235fcb426f68b.png"}
               width={200}
@@ -57,7 +57,7 @@ const page = () => {
               className="rounded-full"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/301ad484778736f483ec2cc6177bfe28.png"}
               width={200}
@@ -66,7 +66,7 @@ const page = () => {
               className="rounded-full"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/559ce1857c49c3b1d109cc5d1d624cd0.png"}
               width={200}
@@ -75,7 +75,7 @@ const page = () => {
               className="rounded-full"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/a43657b1b65bf5d440e2e772d5ed93b2.png"}
               width={200}
@@ -84,7 +84,7 @@ const page = () => {
               className="rounded-full"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center border-custom">
             <Image
               src={"/images/partners/e2ca0a88293be760905386045db70051.png"}
               width={200}

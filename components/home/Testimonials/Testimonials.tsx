@@ -46,7 +46,7 @@ const Testimonials = () => {
       <Swiper
         modules={[Pagination]}
         slidesPerView={1}
-        autoplay={{ delay: 3000 }}
+        // autoplay={{ delay: 3000 }}
         pagination={{
           enabled: true,
           clickable: true,
@@ -55,11 +55,10 @@ const Testimonials = () => {
         onSlideNextTransitionEnd={handleHoverEnd}
         onSlidePrevTransitionStart={handleHoverStartL}
         onSlidePrevTransitionEnd={handleHoverEnd}
-        // onTransitionStart={}
-        // onTransitionEnd={handleHoverEnd}
-        className="bg-[#fff]  w-full sm:w-[450px] h-auto sm:h-[350px] flex gap-5 flex-col py-10 px-10 shadow-2xl items-end justify-start"
+       
+        className="bg-[#fff]  w-full sm:w-[450px] h-auto sm:h-[350px] flex gap-5 flex-col py-10 px-10  items-end justify-start  "
       >
-        <SwiperSlide className="bg-[#fff] w-full sm:w-[450px] h-auto sm:h-[350px] flex gap-5 flex-col py-10 px-10 shadow-2xl items-end justify-start">
+        <SwiperSlide className="bg-[#fff] z-10 relative rounded-md w-full custom-shadow sm:w-[450px] h-auto sm:h-[350px] flex gap-5 flex-col py-10 px-10  items-end justify-start">
           <motion.div animate={slideChange} className="">
             <div className="flex items-center flex-row-reverse justify-end rounded-full gap-5 mb-2">
               <h3 className="text-[23px] font-bold">أحمد أحمد</h3>
@@ -84,7 +83,7 @@ const Testimonials = () => {
             </div>
           </motion.div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#fff] w-full md:w-[450px] h-[450px] md:h-[350px] flex gap-5 flex-col py-10 px-10 shadow-2xl items-end justify-start">
+        <SwiperSlide className="bg-[#fff] z-10 relative w-full custom-shadow   rounded-md md:w-[450px] h-[450px] md:h-[350px] flex gap-5 flex-col py-10 px-10  items-end justify-start">
           <motion.div animate={slideChange} className="">
             <div className="flex items-center flex-row-reverse justify-end rounded-full gap-5 mb-2">
               <h3 className="text-[23px] font-bold">أحمد أحمد</h3>
