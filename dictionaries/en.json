@@ -5,7 +5,10 @@
     { "label": "Trusted Charity", "path": "/trusted-charity" },
     { "label": "Services", "path": "/services" },
     { "label": "Partners", "path": "/our-partners" },
-    { "label": "News", "path": "/media-center" }
+    { "label": "News", "path": "/media-center", "children": [
+      { "label": "Versions", "path": "/versions" },
+      { "label": "Reports", "path": "/reports" }
+    ] }
   ],
   "Home": {
     "title": "Home"

@@ -1,11 +1,15 @@
 {
   "navigationLinks": [
-    { "label": "المركز الاعلامى", "path": "/media-center" },
+    { "label": "المركز الاعلامى", "path": "/media-center", "children": [
+      { "label": "اصدارات تام", "path": "/versions" },
+      { "label": "التقارير", "path": "/reports" }
+    ] },
     { "label": "شركاؤنا", "path": "/our-partners" },
     { "label": "خدماتنا", "path": "/services" },
     { "label": "المنظمة الموثوقة", "path": "/trusted-charity" },
     { "label": "من نحن", "path": "/about-us" },
     { "label": "الرئيسية", "path": "/" }
+
   ],
   "Home": {
     "title": "الرئيسية"
