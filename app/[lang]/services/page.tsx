@@ -1,8 +1,9 @@
 import ServicesItem from "@/components/Services/ServicesItem";
 import HeaderPage from "@/components/shared/HeaderPage/HeaderPage";
+import { Locale } from "@/i18n.config";
 import Image from "next/image";
 
-const page = () => {
+const page = ({ params: { lang } }: { params: { lang: Locale } }) => {
   const services = [
     {
       src: "/images/assets/b6f5f47798b99b8a2b281828203426c3.png",
@@ -42,7 +43,10 @@ const page = () => {
     <section className="has-app-max-width mt-10">
       <HeaderPage image="/images/sericesimgs.jpg" title="خدماتنا" />
 
-      <section className="grid grid-cols-1  lg:grid-cols-2 gap-4 mt-5 px-5 sm:px-10">
+      <section
+        className="grid grid-cols-1  lg:grid-cols-2 gap-4 mt-5 px-5 sm:px-10"
+        style={{ direction: lang === "ar" ? "ltr" : "rtl" }}
+      >
         <div className="bg-[#FAF9F4] order-1 lg:-order-1 p-4 rounded-lg">
           <Image
             src={"/images/c8c858e2ccb758204dff82667cf20517.jpg"}

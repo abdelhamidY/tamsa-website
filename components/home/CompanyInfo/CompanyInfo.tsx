@@ -10,7 +10,7 @@ const CompanyInfo = ({ description, image, title }: CompanyInfoProps) => {
             <h1 className="text-[29px] text-[#fff]">عن الشركة</h1>
             <div className="w-[80px] h-1 bg-[#D57153] mt-2 mb-5"></div>
           </div>
-          <p className="text-white max-w-[600px] text-lg md:text-[23px] text-right leading-9 ">
+          <p className="text-white max-w-[600px] text-lg md:text-[23px] text-right leading-9 font-light ">
             تام هي شركة متخصصة في تقديم حلول إدارية مبتكرة وبرامج تدريبية مخصصة
             لرفع مستوى الجودة في قطاع الأعمال غير الربح. نتفرد بتقديم خدمات تميز
             بفضل فريقنا ذو الخبرة والمستشارين المعتمدين المنتشرين حول المملكة.
