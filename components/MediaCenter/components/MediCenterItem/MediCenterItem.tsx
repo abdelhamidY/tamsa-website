@@ -1,9 +1,18 @@
 import Image from "next/image";
 import { MediaCenterItemProps } from "./types";
 
-const MediaCenterItem = ({ image, title }: MediaCenterItemProps) => {
+const MediaCenterItem = ({
+  image,
+  title,
+  setClickedCard,
+}: MediaCenterItemProps) => {
   return (
-    <div className="flex flex-col justify-center ">
+    <div
+      onClick={() => {
+        setClickedCard({ isClicked: true, data: {} });
+      }}
+      className="flex flex-col justify-center cursor-pointer "
+    >
       <Image
         src={"/images/partnership.png"}
         alt="news"
