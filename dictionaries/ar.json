@@ -1,15 +1,21 @@
 {
   "navigationLinks": [
-    { "label": "المركز الاعلامى", "path": "/media-center", "children": [
-      { "label": "اصدارات تام", "path": "/versions" },
-      { "label": "التقارير", "path": "/reports" }
-    ] },
+    {
+      "label": "المركز الاعلامى",
+      "path": "/media-center",
+      "children": [
+        { "label": "المركز الاعلامى", "path": "/media-center" },
+        { "label": "اصدارات تام", "path": "/versions" },
+        { "label": "التقارير", "path": "/reports" }
+      ]
+    },
+    { "label": "تواصل معنا", "path": "/contact-us" },
+
     { "label": "شركاؤنا", "path": "/our-partners" },
     { "label": "خدماتنا", "path": "/services" },
     { "label": "المنظمة الموثوقة", "path": "/trusted-charity" },
     { "label": "من نحن", "path": "/about-us" },
     { "label": "الرئيسية", "path": "/" }
-
   ],
   "Home": {
     "title": "الرئيسية"

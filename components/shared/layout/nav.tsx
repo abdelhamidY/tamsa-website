@@ -11,8 +11,6 @@ import SvgWorld from "@/icons/World";
 import MenuButton from "./menuButtons";
 import { usePathname } from "next/navigation";
 
-
-
 function Nav({ lang }: { lang: Locale }) {
   const [showNav, setShowNav] = useState(false);
   const [active, setActive] = useState(false);
@@ -83,7 +81,6 @@ function Nav({ lang }: { lang: Locale }) {
     }
   }, [lang]);
 
-
   return (
     <>
       {/* nav large screen */}
@@ -117,46 +114,66 @@ function Nav({ lang }: { lang: Locale }) {
               <div className="flex  justify-between ">
                 <div className=" flex items-center gap-10">
                   {navigationLinks?.map(
-                    (item: { label: string; path: string, children?: any }, index: number) => {
+                    (
+                      item: { label: string; path: string; children?: any },
+                      index: number
+                    ) => {
                       console.log(item.path, pathName);
-                      if(item.children){
+                      if (item.children) {
                         return (
                           <>
-                          <div className="group relative cursor-pointer">
-    <div 
-    className={`menu-hover w-full flex items-center justify-center hover:text-bs-100 cursor-pointer text-sm  font-normal capitalize xl:text-sm`}
-        // href={`/${lang}${item.path}`}
-                            // role="link"
-                            key={index}
-    id="menu-button" aria-expanded="true" aria-haspopup="true">
-      <svg className="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="black" aria-hidden="true">
-        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-      </svg>
-    {item.label}
-    </div>
+                            <div className="group relative cursor-pointer">
+                              <div
+                                className={`menu-hover w-full flex items-center justify-center hover:text-bs-100 cursor-pointer text-sm  font-normal capitalize xl:text-sm`}
+                                // href={`/${lang}${item.path}`}
+                                // role="link"
+                                key={index}
+                                id="menu-button"
+                                aria-expanded="true"
+                                aria-haspopup="true"
+                              >
+                                <svg
+                                  className="-mr-1 h-5 w-5 text-gray-400"
+                                  viewBox="0 0 20 20"
+                                  fill="black"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                                {item.label}
+                              </div>
 
-  <div
-          className="invisible absolute z-50 flex w-[200px] flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible"
-          onClick={() => {}}
-        >
-          {item.children?.map((itemm: { label: string; path: string }, index: number) => {
-            return (
-              <Link
-                href={`/${lang}${itemm.path}`}
-                role="link"
-                key={index}
-                className={`my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2 ${
-                  itemm.path === cutString(pathName)
-                    ? "text-black"
-                    : "text-bs-50"
-                    }`}
-                >
-                {itemm.label}
-              </Link>
-            );
-          })}
-        </div>
-</div>
+                              <div
+                                className="invisible absolute z-50 flex w-[200px] flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible"
+                                onClick={() => {}}
+                              >
+                                {item.children?.map(
+                                  (
+                                    itemm: { label: string; path: string },
+                                    index: number
+                                  ) => {
+                                    return (
+                                      <Link
+                                        href={`/${lang}${itemm.path}`}
+                                        role="link"
+                                        key={index}
+                                        className={`my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2 ${
+                                          itemm.path === cutString(pathName)
+                                            ? "text-black"
+                                            : "text-bs-50"
+                                        }`}
+                                      >
+                                        {itemm.label}
+                                      </Link>
+                                    );
+                                  }
+                                )}
+                              </div>
+                            </div>
                           </>
                         );
                       } else {
@@ -175,7 +192,6 @@ function Nav({ lang }: { lang: Locale }) {
                           </Link>
                         );
                       }
-                      
                     }
                   )}
                 </div>

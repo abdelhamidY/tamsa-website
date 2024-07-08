@@ -32,7 +32,7 @@ const reachUsOnData = [
 ];
 const Page = () => {
   return (
-    <section className="relative xl:after:content[''] my-32 xl:after:w-[25vw] xl:after:h-[110%] xl:after:absolute rtl:after:left-0  ltr:after:right-0 after:rounded-s-2xl after:bottom-0 after:top-[unset] xl:after:top-[-5%] after:bg-[#009DA8]">
+    <section className="relative xl:after:content[''] my-32 xl:after:w-[25vw] xl:after:h-[110%] xl:after:absolute rtl:after:left-0  ltr:after:right-0 after:rounded-s-2xl after:bottom-0 after:top-[unset] xl:after:top-[-5%] after:bg-[#009DA8] px-20">
       <div className="has-app-max-width px-5">
         <div className="flex flex-col gap-8 xl:flex-row">
           <div className=" flex flex-col gap-7">

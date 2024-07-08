@@ -17,7 +17,7 @@ export default async function Home({
     <main className="has-app-max-width">
       <HeaderPage title={Home.title} image="/images/headerImage.png" />
       <CompanyInfo description="" image="" title="" />
-      <OurServices isLtr={lang === "en"}/>
+      <OurServices isLtr={lang === "en"} />
       <Statics />
       <Clients />
       <Testimonials />

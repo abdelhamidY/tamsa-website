@@ -4,7 +4,7 @@ import { appRoutes } from "@/utils/constants/app.routes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, useAnimation } from "framer-motion";
-const OurServices = ({isLtr}:{isLtr:boolean}) => {
+const OurServices = ({ isLtr }: { isLtr: boolean }) => {
   const router = useRouter();
   const textControls = useAnimation();
   const iconControls = useAnimation();
@@ -38,9 +38,14 @@ const OurServices = ({isLtr}:{isLtr:boolean}) => {
         </div>
         <div className="flex gap-6 w-full flex-col items-center justify-center">
           <div className="grid lg:grid-cols-3   grid-cols-1  justify-between gap-6 w-full lg:h-[250px]">
-            <div className="group  relative h-[250px] hover:from-gray-900 hover:to-black overflow-hidden transition-all duration-500 bg-gradient-to-b from-black to-gray-800">
-                <Image alt="background" src={"/images/c8c858e2ccb758204dff82667cf20517.jpg"} className="object-cover group-hover:scale-125 transition-all duration-500  opacity-50  object-center" fill/>
-               <div className=" relative flex flex-col justify-center items-start w-[100%] gap-4 p-6">
+            <div className="group rounded-lg relative h-[250px] hover:from-gray-900 hover:to-black overflow-hidden transition-all duration-500 bg-gradient-to-b from-black to-gray-800">
+              <Image
+                alt="background"
+                src={"/images/c8c858e2ccb758204dff82667cf20517.jpg"}
+                className="object-cover group-hover:scale-125 transition-all duration-500  opacity-50  object-center"
+                fill
+              />
+              <div className=" relative flex flex-col justify-center items-start w-[100%] gap-4 p-6">
                 <Image
                   src="/images/partners/ffc22d274e5959c86c0797df52f6c1ee (1).png"
                   className="group-hover:scale-75 rounded-md transition-all duration-500"
@@ -51,12 +56,19 @@ const OurServices = ({isLtr}:{isLtr:boolean}) => {
                 <p className="text-white text-[23px] group-hover:-translate-y-4 transition-all duration-500 text-right font-bold ">
                   تأسيس وحدات ومبادرات المسؤولية المجتمعية
                 </p>
-                <p className="opacity-0 transition-all duration-500 translate-y-full group-hover:-translate-y-5 text-white group-hover:opacity-100">2023</p>
+                <p className="opacity-0 transition-all duration-500 translate-y-full group-hover:-translate-y-5 text-white group-hover:opacity-100">
+                  2023
+                </p>
               </div>
             </div>
-            <div className="group  relative h-[250px] hover:from-gray-900 hover:to-black overflow-hidden transition-all duration-500 bg-gradient-to-b from-black to-gray-800">
-                <Image alt="." src={"/images/c8c858e2ccb758204dff82667cf20517.jpg"} className="object-cover group-hover:scale-125 transition-all duration-500  opacity-50  object-center" fill/>
-               <div className=" relative flex flex-col justify-center items-start w-[100%] gap-4 p-6">
+            <div className="group rounded-lg relative h-[250px] hover:from-gray-900 hover:to-black overflow-hidden transition-all duration-500 bg-gradient-to-b from-black to-gray-800">
+              <Image
+                alt="."
+                src={"/images/c8c858e2ccb758204dff82667cf20517.jpg"}
+                className="object-cover group-hover:scale-125 transition-all duration-500  opacity-50  object-center"
+                fill
+              />
+              <div className=" relative flex flex-col justify-center items-start w-[100%] gap-4 p-6">
                 <Image
                   src="/images/partners/ffc22d274e5959c86c0797df52f6c1ee (1).png"
                   className="group-hover:scale-75 rounded-md transition-all duration-500"
@@ -67,12 +79,19 @@ const OurServices = ({isLtr}:{isLtr:boolean}) => {
                 <p className="text-white text-[23px] group-hover:-translate-y-4 transition-all duration-500 text-right font-bold ">
                   تأسيس وحدات ومبادرات المسؤولية المجتمعية
                 </p>
-                <p className="opacity-0 transition-all duration-500 translate-y-full group-hover:-translate-y-5 text-white group-hover:opacity-100">2023</p>
+                <p className="opacity-0 transition-all duration-500 translate-y-full group-hover:-translate-y-5 text-white group-hover:opacity-100">
+                  2023
+                </p>
               </div>
             </div>
-            <div className="group  relative h-[250px] hover:from-gray-900 hover:to-black overflow-hidden transition-all duration-500 bg-gradient-to-b from-black to-gray-800">
-                <Image alt="." src={"/images/7a06dcc844ae8fdea0f49e0ce31edbf8.jpg"} className="object-cover group-hover:scale-125 transition-all duration-500  opacity-50  object-center" fill/>
-               <div className=" relative flex flex-col justify-center items-start w-[100%] gap-4 p-6">
+            <div className="group rounded-lg relative h-[250px] hover:from-gray-900 hover:to-black overflow-hidden transition-all duration-500 bg-gradient-to-b from-black to-gray-800">
+              <Image
+                alt="."
+                src={"/images/7a06dcc844ae8fdea0f49e0ce31edbf8.jpg"}
+                className="object-cover group-hover:scale-125 transition-all duration-500  opacity-50  object-center"
+                fill
+              />
+              <div className=" relative flex flex-col justify-center items-start w-[100%] gap-4 p-6">
                 <Image
                   src="/images/partners/ffc22d274e5959c86c0797df52f6c1ee (1).png"
                   className="group-hover:scale-75 rounded-md transition-all duration-500"
@@ -83,11 +102,11 @@ const OurServices = ({isLtr}:{isLtr:boolean}) => {
                 <p className="text-white text-[23px] group-hover:-translate-y-4 transition-all duration-500 text-right font-bold ">
                   تأهيل الوحدات المستدامة
                 </p>
-                <p className="opacity-0 transition-all duration-500 translate-y-full group-hover:-translate-y-5 text-white group-hover:opacity-100">2023</p>
+                <p className="opacity-0 transition-all duration-500 translate-y-full group-hover:-translate-y-5 text-white group-hover:opacity-100">
+                  2023
+                </p>
               </div>
             </div>
-       
-      
           </div>
           <div className="flex gap-4 w-full justify-center">
             <motion.div
@@ -98,12 +117,14 @@ const OurServices = ({isLtr}:{isLtr:boolean}) => {
             >
               <motion.div
                 className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#fff]"
-                 animate={isLtr? iconControls:textControls}
+                animate={isLtr ? iconControls : textControls}
               >
                 <LeftArrowSvgrepoCom width={20} height={20} fontSize={20} />
               </motion.div>
 
-              <motion.p animate={isLtr? textControls:iconControls}>المزيد</motion.p>
+              <motion.p animate={isLtr ? textControls : iconControls}>
+                المزيد
+              </motion.p>
             </motion.div>
           </div>
         </div>
